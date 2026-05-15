@@ -1,93 +1,106 @@
 .footer {
-    max-width: 1240px;
-    margin: 0 auto;
+  position: relative;
 
-    padding: 100px 0 80px;
+  overflow: hidden;
 
-    text-align: center;
+  max-width: 1240px;
+  margin: 0 auto;
 
-    position: relative;
+  padding: 120px 40px 80px;
+
+  text-align: center;
 }
 
 .footer::before {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    width: 500px;
-    height: 200px;
+  top: 50%;
+  left: 50%;
 
-    left: 50%;
-    top: 20px;
+  transform: translate(-50%, -50%);
 
-    transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
 
-    background:
-        radial-gradient(circle,
-            rgba(109, 109, 255, 0.25),
-            transparent 70%);
+  background:
+    radial-gradient(
+      circle,
+      rgba(109, 109, 255, 0.22),
+      transparent 70%
+    );
 
-    z-index: -1;
+  z-index: -1;
 }
 
 .footer__title {
-    margin: 0 0 16px;
+  margin: 0 0 24px;
 
-    font-size: 42px;
+  font-family: "Archivo Black", sans-serif;
 
-    font-family: "Archivo Black", sans-serif;
+  font-size: 48px;
 }
 
 .footer__email {
-    margin: 0 0 32px;
+  margin: 0 0 40px;
 
-    font-size: 18px;
+  font-size: 20px;
 
-    opacity: 0.7;
+  opacity: 0.85;
 }
 
 .footer__socials {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    gap: 32px;
+  gap: 40px;
+
+  margin-bottom: 48px;
 }
 
 .footer__link {
-    color: white;
+  color: white;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    transition:
-        opacity 0.3s,
-        transform 0.3s;
+  transition: opacity 0.3s;
 }
 
 .footer__link:hover {
-    opacity: 0.7;
-
-    transform: translateY(-3px);
+  opacity: 0.7;
 }
 
 .footer__copyright {
-    margin-top: 48px;
+  margin: 0;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    opacity: 0.5;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 767px) {
 
-    .footer {
-        padding: 60px 0;
-    }
+  .footer {
+    padding: 100px 20px 60px;
+  }
 
-    .footer__title {
-        font-size: 32px;
-    }
+  .footer::before {
+    width: 650px;
+    height: 650px;
+  }
+
+  .footer__title {
+    font-size: 36px;
+  }
+
+  .footer__socials {
+    flex-direction: column;
+
+    gap: 20px;
+  }
 
 }
